@@ -1,0 +1,12 @@
+package com.sample
+ 
+import com.sample.Message;
+import java.util.Map;
+import java.util.List;
+ 
+rule "Hello World"
+    when
+        $m: Message( $items: items["keyA"] )
+    then
+        System.out.println( $items.get("keyA") );
+end
